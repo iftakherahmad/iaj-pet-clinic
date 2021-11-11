@@ -1,4 +1,4 @@
-package net.therap.model;
+package net.therap.iajpetclinic.model;
 
 import java.time.LocalDate;
 
