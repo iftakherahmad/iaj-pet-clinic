@@ -39,6 +39,7 @@
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
+
     <build>
         <plugins>
             <plugin>
