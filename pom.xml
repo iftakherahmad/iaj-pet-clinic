@@ -39,7 +39,7 @@
 
     <scm>
 <!--        <connection>scm:git:git@github.com:iftakherahmad/iaj-pet-clinic.git</connection>-->
-        <developerConnection>scm:git:git@github.com:iftakherahmad/iaj-pet-clinic.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/iftakherahmad/iaj-pet-clinic.git</developerConnection>
 <!--        <url>https://github.com/iftakherahmad/iaj-pet-clinic.git</url>-->
 <!--        <tag>@{project.version}</tag>-->
       <tag>iaj-pet-clinic-0.0.1</tag>
