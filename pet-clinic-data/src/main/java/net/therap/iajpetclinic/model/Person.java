@@ -4,7 +4,7 @@ package net.therap.iajpetclinic.model;
  * @author iftakhar.ahmed
  * @since 11/11/21
  */
-public class Person {
+public class Person extends BaseEntity{
 
     private String firstName;
     private String lastName;
