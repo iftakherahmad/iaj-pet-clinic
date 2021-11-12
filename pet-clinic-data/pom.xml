@@ -3,9 +3,9 @@
     <parent>
         <artifactId>iaj-pet-clinic</artifactId>
         <groupId>net.therap</groupId>
-        <version>0.0.3-SNAPSHOT</version>
+        <version>0.0.3</version>
     </parent>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pet-clinic-data</artifactId>
