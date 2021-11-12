@@ -14,7 +14,7 @@
     </parent>
     <groupId>net.therap</groupId>
     <artifactId>iaj-pet-clinic</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4-SNAPSHOT</version>
     <name>iaj-pet-clinic</name>
     <description>iaj-pet-clinic</description>
     <properties>
@@ -43,7 +43,7 @@
         <developerConnection>scm:git:git@github.com:iftakherahmad/iaj-pet-clinic.git</developerConnection>
         <url>https://github.com/iftakherahmad/iaj-pet-clinic.git</url>
 <!--        <tag>@{project.version}</tag>-->
-        <tag>iaj-pet-clinic-0.0.3</tag>
+        <tag>iaj-pet-clinic-0.0.2</tag>
   </scm>
 
 </project>
