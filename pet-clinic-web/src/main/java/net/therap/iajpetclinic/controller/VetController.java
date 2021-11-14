@@ -1,8 +1,12 @@
 package net.therap.iajpetclinic.controller;
 
+import net.therap.iajpetclinic.model.Vet;
+import net.therap.iajpetclinic.service.VetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.Set;
 
 /**
  * @author iftakhar.ahmed
@@ -11,8 +15,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class VetController {
 
-    @RequestMapping("/vets")
+    private final VetService vetService;
+
+    public VetController(VetService vetService) {
+        this.vetService = vetService;
+    }
+
+    @RequestMapping({"/vets","/vets/","/vets/index","/vets/index.html"})
     public String listVets(Model model){
+        Set<Vet> vets=vetService.findAll();
+        model.addAttribute("vets",vets);
         return "vets/index";
     }
 }
