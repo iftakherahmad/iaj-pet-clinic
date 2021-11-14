@@ -3,6 +3,7 @@ package net.therap.iajpetclinic.service.map;
 import net.therap.iajpetclinic.model.Owner;
 import net.therap.iajpetclinic.service.CrudService;
 import net.therap.iajpetclinic.service.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -10,6 +11,7 @@ import java.util.Set;
  * @author iftakhar.ahmed
  * @since 11/13/21
  */
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
 
     @Override

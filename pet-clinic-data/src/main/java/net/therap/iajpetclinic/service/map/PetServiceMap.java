@@ -2,6 +2,7 @@ package net.therap.iajpetclinic.service.map;
 
 import net.therap.iajpetclinic.model.Pet;
 import net.therap.iajpetclinic.service.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -9,6 +10,7 @@ import java.util.Set;
  * @author iftakhar.ahmed
  * @since 11/13/21
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
 
     @Override
