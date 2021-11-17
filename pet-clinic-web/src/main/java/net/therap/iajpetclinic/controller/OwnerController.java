@@ -22,10 +22,15 @@ public class OwnerController {
         this.ownerService = ownerService;
     }
 
-    @RequestMapping({"/","","/index","/index.html","/find"})
+    @RequestMapping({"/","","/index","/index.html"})
     public String listOwners(Model model){
         Set<Owner> owners=ownerService.findAll();
         model.addAttribute("owners",owners);
         return "owners/index";
+    }
+
+    @RequestMapping({"/find"})
+    public String findOwners(Model model){
+        return "notImplemented";
     }
 }
