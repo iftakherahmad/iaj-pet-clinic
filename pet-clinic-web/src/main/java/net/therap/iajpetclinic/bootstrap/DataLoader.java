@@ -1,6 +1,7 @@
 package net.therap.iajpetclinic.bootstrap;
 
 import net.therap.iajpetclinic.model.Owner;
+import net.therap.iajpetclinic.model.Pet;
 import net.therap.iajpetclinic.model.PetType;
 import net.therap.iajpetclinic.model.Vet;
 import net.therap.iajpetclinic.service.OwnerService;
@@ -8,6 +9,8 @@ import net.therap.iajpetclinic.service.PetTypeService;
 import net.therap.iajpetclinic.service.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 /**
  * @author iftakhar.ahmed
@@ -40,12 +43,33 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1=new Owner();
         owner1.setFirstName("Ifakher");
         owner1.setLastName("Ahmad");
+        owner1.setAddress("AEH, chankharpool");
+        owner1.setCity("Dhaka");
+        owner1.setTelephone("01779864777");
 
         ownerService.save(owner1);
+
+        Pet mikesPet=new Pet();
+        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rosco");
+
+        owner1.getPets().add(mikesPet);
 
         Owner owner2=new Owner();
         owner2.setFirstName("MD");
         owner2.setLastName("Fahim");
+        owner2.setAddress("Ilisha, Jongson");
+        owner2.setCity("Bhola");
+        owner2.setTelephone("01644404426");
+
+        Pet fahimsPet=new Pet();
+        fahimsPet.setName("fam");
+        fahimsPet.setPetType(savedCatPetType);
+        fahimsPet.setOwner(owner2);
+        fahimsPet.setBirthDate(LocalDate.now());
+        owner2.getPets().add(fahimsPet);
 
         ownerService.save(owner2);
 
