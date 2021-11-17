@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
 <head>
     <meta charset="UTF-8">
     <title>List of Owners</title>
 </head>
 <body>
-    <table>
+    <h2 th:text="'List of owners'"></h2><br/>
+    <table id="vets" class="table table-striped">
         <tr>
-            <th th:text="'ID'">Id</th>
-            <th th:text="'FIRST NAME'">FIRST NAME</th>
-            <th th:text="'LAST NAME'">LAST NAME</th>
+            <th style="width: 150px;" th:text="'ID'">Id</th>
+            <th style="width: 200px;" th:text="'FIRST NAME'">FIRST NAME</th>
+            <th style="width: 200px;" th:text="'LAST NAME'">LAST NAME</th>
         </tr>
         <tr th:each="owner : ${owners}">
             <td th:text="${owner.getId()}"></td>
