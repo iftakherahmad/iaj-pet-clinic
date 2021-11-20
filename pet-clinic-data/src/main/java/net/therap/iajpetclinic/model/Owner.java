@@ -1,5 +1,6 @@
 package net.therap.iajpetclinic.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -7,11 +8,20 @@ import java.util.Set;
  * @author iftakhar.ahmed
  * @since 11/11/21
  */
+@Entity
+@Table(name = "owner")
 public class Owner extends Person {
 
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "city")
     private String city;
+
+    @Column(name = "telephone")
     private String telephone;
+
+    @OneToMany(mappedBy = "owner",cascade = CascadeType.ALL)
     private Set<Pet> pets = new HashSet<>();
 
     public String getAddress() {
